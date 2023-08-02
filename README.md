@@ -26,4 +26,4 @@ Este é um sistema simples de login desenvolvido em PHP e MySQL, criado usando o
 1. Clone este repositório em sua máquina local usando o Git executando o seguinte comando no terminal:
 
    ```bash
-   git clone https://github.com/seu-usuario/SistemaLoginPHP.git
+   git clone https://github.com/ivano-lab/SistemaLoginPHP.git
