@@ -15,14 +15,15 @@ if(isset($_POST['btn-entrar'])):
       $resultado = mysqli_query($connect, $sql);
 
       if(mysqli_num_rows($resultado) > 0):
+        //$senha = md5($senha);
         $sql = "SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'";
         $resultado = mysqli_query($connect, $sql);
 
-            if(mysqli_num_rows($resultado) > 1):
+            if(mysqli_num_rows($resultado) == 1):
                 $dados = mysqli_fetch_array($resultado);
                 $_SESSION['logado'] = true;
                 $_SESSION['id_usuario'] = $dados['id'];
-                header('location: home.php');
+                header('Location: home.php');
             else:
                 $erros[] = "<li> Usuário e senha não conferem </li>";
             endif;               
